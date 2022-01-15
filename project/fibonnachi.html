@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Click me!</title>
+        <style>
+            div { padding: 10px;}
+        </style>
+        <script>
+            window.onload = function() {
+                // User input
+                var input = prompt("Please enter the length of a Fibonnachi cequence");
+                var length = parseInt(input);
+
+                if(length < 3) {
+                    console.error("Input length is less than 2");
+                    return;
+                 }
+                 var x = 0;
+                 var y = 1;
+                 var sum = x + y;
+
+                 var text = document.getElementById("message")
+                 text.innerHTML = "0, 1"
+
+                 //Cycle
+                 for(var i = 0; i < length; i++) {
+                     text.innerHTML = text.innerHTML + ", " + sum
+                     x = y;
+                     y = sum;
+                     sum = x + y;
+                 }
+            }
+
+       
+        </script>
+    </head>
+    <body>
+        <div id="message"></div>
+    </body>
+</html>

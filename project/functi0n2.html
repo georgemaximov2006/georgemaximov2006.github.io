@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var fly = function(num) {
+    for (var i = 0; i < num; i++){
+        console.log("Flying!");
+    }
+}
+fly(3);
+
+function quack(num) {
+    for (var i = 0; i < num; i++) {
+        console.log("Quack!")
+    }
+}
+quack(3);
+
+var superFly = fly;
+superFly(2);
+
+var superQuack = quack;
+superQuack(3);
+        </script>
+        <script>
+            var numbersArray = [60, 50, 62, 58, 54, 54];
+
+            function compareNumber(num1, num2) {
+                if (num1 > num2) {
+                    return 1;
+                } else if (num1 === num2) {
+                    return 0;
+                } else {
+                    return -1;
+                }
+            }
+            console.log(numbersArray);
+            numbersArray.sort(compareNumber);
+            console.log(numbersArray);
+        </script>
+        <script>
+            function addN(n) {
+                var adder = function(x) {
+                    return n + x;
+                };
+                return adder;
+            }
+            var add2 = addN(2);
+            /* 
+            function add2(x){
+                return 2 + x;
+            }
+            */ 
+            console.log(add2(10));
+            console.log(add2(100));
+
+            var add100 = addN(100);
+            console.log(add100(1));
+            console.log(add100(50));
+        </script>
+        <script>
+            function sayIt(translator) {
+                var phrase = translator("Hello");
+                alert(phrase);
+            }
+            function hawaiianTranslator(word) {
+                if (word === "Hello") return "Aloha";
+                if (word === "Goodbye") return "Aloha";
+            }
+           sayIt(hawaiianTranslator);
+           function russianTranslator(word) {
+                if (word === "Hello") return "Пока";
+                if (word === "Goodbye") return "Пока";
+            }
+           sayIt(russianTranslator);
+           var langue = prompt("Выберите язык, если русский, то введите 1, если гавайсктий то -3:")
+            var index = [ sayIt(russianTranslator),  sayIt(hawaiianTranslator)];
+                var
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
